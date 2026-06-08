@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExtCharge — Payments for browser extensions, hosted in the EU</title>
+  <meta name="description" content="Connect Stripe, add a few lines of code, get paid. Subscriptions, one-time, free trials. A drop-in alternative to ExtensionPay, run in Germany." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ExtCharge — Payments for browser extensions" />
+  <meta property="og:description" content="A drop-in, server-authoritative alternative to ExtensionPay. Hosted in the EU." />
+  <meta property="og:url" content="https://extcharge.com" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            ink: '#0b0f0e',
+            paper: '#fbfbf9',
+            accent: '#0f8a5f',     // restrained emerald — "charge", not neon
+            accentdk: '#0a6647',
+            muted: '#5b635f',
+            line: '#e6e7e2',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    .label { letter-spacing: 0.08em; }
+  </style>
+</head>
+
+<body class="bg-paper text-ink font-sans antialiased">
+
+  <!-- Nav -->
+  <header class="border-b border-line">
+    <div class="mx-auto max-w-5xl px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-mono font-semibold text-lg tracking-tight">
+        ext<span class="text-accent">charge</span>
+      </a>
+      <a href="#waitlist"
+         class="text-sm font-medium px-4 py-2 rounded-md bg-ink text-paper hover:bg-black transition-colors">
+        Get early access
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-6">
+
+    <!-- Hero -->
+    <section class="pt-24 pb-20 max-w-3xl">
+      <p class="label font-mono text-xs uppercase text-accent mb-5">Hosted in the EU · Building now</p>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.08]">
+        Payments for your browser extension.
+        <span class="block text-muted font-semibold">Without the headaches.</span>
+      </h1>
+      <p class="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
+        Connect Stripe, add a few lines of code, get paid — subscriptions, one-time
+        purchases, free trials. A drop-in alternative to ExtensionPay, run in Germany.
+      </p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 sm:items-center">
+        <a href="#waitlist"
+           class="inline-flex justify-center px-6 py-3 rounded-md bg-accent text-white font-semibold hover:bg-accentdk transition-colors">
+          Get early access
+        </a>
+        <span class="text-sm text-muted">We're building it now. Leave your email and you're first in line.</span>
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-10">Why another one</h2>
+      <div class="grid sm:grid-cols-3 gap-px bg-line rounded-lg overflow-hidden border border-line">
+        <div class="bg-paper p-7">
+          <div class="font-mono text-accent text-sm mb-3">01</div>
+          <h3 class="font-semibold text-lg mb-2">Trials that can't be cheated</h3>
+          <p class="text-muted leading-relaxed text-[15px]">
+            Most extension paywalls check the trial in the browser, where any user can
+            reset it. ExtCharge decides on the server. Your free trial means what you set.
+          </p>
+        </div>
+        <div class="bg-paper p-7">
+          <div class="font-mono text-accent text-sm mb-3">02</div>
+          <h3 class="font-semibold text-lg mb-2">Hosted in the EU</h3>
+          <p class="text-muted leading-relaxed text-[15px]">
+            Your users' data stays in Europe, GDPR-first. No US data transfer to
+            explain to your customers.
+          </p>
+        </div>
+        <div class="bg-paper p-7">
+          <div class="font-mono text-accent text-sm mb-3">03</div>
+          <h3 class="font-semibold text-lg mb-2">Switch in one line</h3>
+          <p class="text-muted leading-relaxed text-[15px]">
+            ExtCharge speaks the same API as the open-source <span class="font-mono text-ink">ExtPay.js</span>
+            client. Already on ExtensionPay? Change one URL and you're moved. No rewrite.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-10">How it works</h2>
+      <ol class="space-y-8 max-w-2xl">
+        <li class="flex gap-5">
+          <span class="font-mono text-accent font-semibold shrink-0 w-8">1.</span>
+          <div>
+            <h3 class="font-semibold text-lg">Connect Stripe</h3>
+            <p class="text-muted leading-relaxed mt-1">
+              Your money goes to your own Stripe account. We never hold funds.
+            </p>
+          </div>
+        </li>
+        <li class="flex gap-5">
+          <span class="font-mono text-accent font-semibold shrink-0 w-8">2.</span>
+          <div>
+            <h3 class="font-semibold text-lg">Add the client</h3>
+            <p class="text-muted leading-relaxed mt-1">
+              A few lines in your extension — paid status, trials, checkout, all handled.
+            </p>
+          </div>
+        </li>
+        <li class="flex gap-5">
+          <span class="font-mono text-accent font-semibold shrink-0 w-8">3.</span>
+          <div>
+            <h3 class="font-semibold text-lg">Get paid</h3>
+            <p class="text-muted leading-relaxed mt-1">
+              Subscriptions, one-time purchases, free trials. You keep control of
+              pricing and plans.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-6">Pricing</h2>
+      <p class="text-xl font-semibold max-w-2xl leading-snug">
+        A small percentage per transaction.
+        <span class="text-muted font-medium">No monthly fee, no setup fee — you pay only when you earn.</span>
+      </p>
+    </section>
+
+    <!-- Waitlist CTA -->
+    <section id="waitlist" class="py-16 border-t border-line">
+      <div class="max-w-xl">
+        <h2 class="text-2xl font-bold tracking-tight">We're validating before we build.</h2>
+        <p class="mt-3 text-muted leading-relaxed">
+          If extension payments without the headaches sound right, leave your email —
+          you'll get early access and a say in what ships.
+        </p>
+
+        <form id="waitlist-form" class="mt-7 flex flex-col sm:flex-row gap-3" novalidate>
+          <!-- honeypot: hidden from humans, bots fill it -->
+          <input type="text" name="hp" id="hp" tabindex="-1" autocomplete="off"
+                 class="hidden" aria-hidden="true" />
+          <input type="email" name="email" id="email" required
+                 placeholder="you@example.com"
+                 class="flex-1 px-4 py-3 rounded-md border border-line bg-white
+                        focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent
+                        placeholder:text-muted/70" />
+          <button type="submit"
+                  class="px-6 py-3 rounded-md bg-accent text-white font-semibold
+                         hover:bg-accentdk transition-colors disabled:opacity-50">
+            Get early access
+          </button>
+        </form>
+        <p id="form-msg" class="mt-3 text-sm h-5" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-line">
+    <div class="mx-auto max-w-5xl px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-sm text-muted">
+      <span class="font-mono">ext<span class="text-accent">charge</span></span>
+      <span>Made and operated in Germany. Independent — not affiliated with ExtensionPay.</span>
+    </div>
+  </footer>
+
+  <script>
+    const ENDPOINT = "https://auth.solytics.de/t/extcharge/marketing/public/lead-capture";
+    const SEGMENT = "extcharge-waitlist";
+
+    const form = document.getElementById("waitlist-form");
+    const msg = document.getElementById("form-msg");
+    const btn = form.querySelector("button");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const hp = document.getElementById("hp").value;
+
+      if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        msg.textContent = "Please enter a valid email address.";
+        msg.className = "mt-3 text-sm h-5 text-red-600";
+        return;
+      }
+
+      btn.disabled = true;
+      msg.textContent = "Adding you…";
+      msg.className = "mt-3 text-sm h-5 text-muted";
+
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, name: "", segment: SEGMENT, hp }),
+        });
+        if (res.ok) {
+          form.reset();
+          msg.textContent = "You're on the list. We'll be in touch.";
+          msg.className = "mt-3 text-sm h-5 text-accent font-medium";
+        } else {
+          throw new Error("status " + res.status);
+        }
+      } catch (err) {
+        msg.textContent = "Something went wrong — please try again in a moment.";
+        msg.className = "mt-3 text-sm h-5 text-red-600";
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
