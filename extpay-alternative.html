@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExtensionPay alternative — ExtCharge, hosted in the EU</title>
+  <meta name="description" content="Thinking about leaving ExtPay? ExtCharge speaks the same ExtPay.js API, so you switch in one line. Hosted in the EU, GDPR-first, a transparent percentage per transaction." />
+  <link rel="canonical" href="https://extcharge.com/extpay-alternative" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ExtensionPay alternative — ExtCharge" />
+  <meta property="og:description" content="A drop-in, EU-hosted alternative to ExtensionPay. Same ExtPay.js API, switch in one line." />
+  <meta property="og:url" content="https://extcharge.com/extpay-alternative" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            ink: '#0b0f0e',
+            paper: '#fbfbf9',
+            accent: '#0f8a5f',
+            accentdk: '#0a6647',
+            muted: '#5b635f',
+            line: '#e6e7e2',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    .label { letter-spacing: 0.08em; }
+  </style>
+
+  <!-- FAQ structured data for AI/search visibility -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ExtCharge work with ExtPay.js?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ExtCharge speaks the same API as the open-source ExtPay.js client. If your extension already uses ExtensionPay, you change one URL — no rewrite of your payment logic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does ExtCharge host data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the European Union. ExtCharge is built and operated in Germany, GDPR-first, so there is no US data transfer to explain to your users."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does ExtCharge cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A transparent percentage per transaction, with no monthly fee and no setup fee. You pay only when you earn. Your money goes to your own Stripe account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ExtCharge affiliated with ExtensionPay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. ExtCharge is independent and not affiliated with ExtensionPay. It is API-compatible with the open-source ExtPay.js client so developers can move without rewriting their integration."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-paper text-ink font-sans antialiased">
+
+  <!-- Nav -->
+  <header class="border-b border-line">
+    <div class="mx-auto max-w-5xl px-6 h-16 flex items-center justify-between">
+      <a href="/" class="font-mono font-semibold text-lg tracking-tight">
+        ext<span class="text-accent">charge</span>
+      </a>
+      <a href="/#waitlist"
+         class="text-sm font-medium px-4 py-2 rounded-md bg-ink text-paper hover:bg-black transition-colors">
+        Get early access
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-6">
+
+    <!-- Hero -->
+    <section class="pt-24 pb-16 max-w-3xl">
+      <p class="label font-mono text-xs uppercase text-accent mb-5">ExtensionPay alternative</p>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.08]">
+        Thinking about leaving ExtPay?
+        <span class="block text-muted font-semibold">You switch in one line.</span>
+      </h1>
+      <p class="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
+        ExtensionPay is a solid, open-source way to charge for a browser extension —
+        many great extensions run on it. ExtCharge speaks the same
+        <span class="font-mono text-ink">ExtPay.js</span> API, so if you want your payments
+        hosted in the EU, you don't start over. You change one URL.
+      </p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 sm:items-center">
+        <a href="/#waitlist"
+           class="inline-flex justify-center px-6 py-3 rounded-md bg-accent text-white font-semibold hover:bg-accentdk transition-colors">
+          Get early access
+        </a>
+        <span class="text-sm text-muted">We're building it now. Leave your email and you're first in line.</span>
+      </div>
+    </section>
+
+    <!-- Why look -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-10">Why developers look for an alternative</h2>
+      <div class="grid sm:grid-cols-3 gap-px bg-line rounded-lg overflow-hidden border border-line">
+        <div class="bg-paper p-7">
+          <div class="font-mono text-accent text-sm mb-3">01</div>
+          <h3 class="font-semibold text-lg mb-2">EU data residency</h3>
+          <p class="text-muted leading-relaxed text-[15px]">
+            If your users are in Europe, where their data lives is a question you'll be
+            asked. ExtCharge is hosted in the EU and operated in Germany, GDPR-first —
+            no US data transfer to document in your privacy policy.
+          </p>
+        </div>
+        <div class="bg-paper p-7">
+          <div class="font-mono text-accent text-sm mb-3">02</div>
+          <h3 class="font-semibold text-lg mb-2">A second source for the same API</h3>
+          <p class="text-muted leading-relaxed text-[15px]">
+            Building your billing on a single hosted service is a single point of
+            dependency. Because ExtCharge is API-compatible with
+            <span class="font-mono text-ink">ExtPay.js</span>, you keep a real exit —
+            in either direction.
+          </p>
+        </div>
+        <div class="bg-paper p-7">
+          <div class="font-mono text-accent text-sm mb-3">03</div>
+          <h3 class="font-semibold text-lg mb-2">Fees you can read</h3>
+          <p class="text-muted leading-relaxed text-[15px]">
+            ExtensionPay's public rate is 5% per charge, on top of Stripe. ExtCharge is
+            a transparent percentage per transaction — no monthly fee, no setup fee. Your
+            money still goes to your own Stripe account.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-10">Side by side</h2>
+      <div class="overflow-x-auto rounded-lg border border-line">
+        <table class="w-full text-[15px] border-collapse">
+          <thead>
+            <tr class="bg-white border-b border-line text-left">
+              <th class="p-4 font-semibold w-1/3"></th>
+              <th class="p-4 font-semibold">ExtCharge</th>
+              <th class="p-4 font-semibold text-muted">ExtensionPay</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line">
+            <tr>
+              <td class="p-4 font-medium">Client API</td>
+              <td class="p-4">Same <span class="font-mono text-ink">ExtPay.js</span> API</td>
+              <td class="p-4 text-muted">Open-source <span class="font-mono">ExtPay.js</span></td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-4 font-medium">Switching cost</td>
+              <td class="p-4">Change one URL</td>
+              <td class="p-4 text-muted">—</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Data hosting</td>
+              <td class="p-4">European Union (Germany)</td>
+              <td class="p-4 text-muted">Not specified</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-4 font-medium">Your payouts</td>
+              <td class="p-4">Your own Stripe account</td>
+              <td class="p-4 text-muted">Your own Stripe account</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Transaction fee</td>
+              <td class="p-4">A transparent % — no monthly fee</td>
+              <td class="p-4 text-muted">5% per charge (+ Stripe)</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="p-4 font-medium">Operated by</td>
+              <td class="p-4">An independent team in Germany</td>
+              <td class="p-4 text-muted">Independent</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-xs text-muted">
+        ExtensionPay details from extensionpay.com (June 2026). ExtCharge is independent and
+        not affiliated with ExtensionPay.
+      </p>
+    </section>
+
+    <!-- Switch -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-6">What switching looks like</h2>
+      <p class="text-xl font-semibold max-w-2xl leading-snug">
+        You keep your <span class="font-mono text-ink">ExtPay.js</span> integration.
+        <span class="text-muted font-medium">The paid-status checks, the trial logic, the checkout flow — all stay. You point the client at ExtCharge instead. One URL.</span>
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-10">Questions</h2>
+      <div class="space-y-8 max-w-2xl">
+        <div>
+          <h3 class="font-semibold text-lg">Does ExtCharge work with ExtPay.js?</h3>
+          <p class="text-muted leading-relaxed mt-1">
+            Yes. ExtCharge speaks the same API as the open-source ExtPay.js client. If your
+            extension already uses ExtensionPay, you change one URL — no rewrite.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">Where does ExtCharge host data?</h3>
+          <p class="text-muted leading-relaxed mt-1">
+            In the European Union. ExtCharge is built and operated in Germany, GDPR-first,
+            so there's no US data transfer to explain to your users.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">What does it cost?</h3>
+          <p class="text-muted leading-relaxed mt-1">
+            A transparent percentage per transaction, no monthly fee, no setup fee — you pay
+            only when you earn. Your money goes to your own Stripe account.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">Is ExtCharge affiliated with ExtensionPay?</h3>
+          <p class="text-muted leading-relaxed mt-1">
+            No. ExtCharge is independent and not affiliated with ExtensionPay. It's
+            API-compatible with the open-source ExtPay.js client so you can move without
+            rewriting your integration.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 border-t border-line">
+      <div class="max-w-xl">
+        <h2 class="text-2xl font-bold tracking-tight">Want EU-hosted extension payments?</h2>
+        <p class="mt-3 text-muted leading-relaxed">
+          We're building ExtCharge now. Leave your email — you'll get early access, a
+          one-line migration when you're ready, and a say in what ships.
+        </p>
+        <a href="/#waitlist"
+           class="mt-7 inline-flex justify-center px-6 py-3 rounded-md bg-accent text-white font-semibold hover:bg-accentdk transition-colors">
+          Get early access
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-line">
+    <div class="mx-auto max-w-5xl px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-sm text-muted">
+      <span class="font-mono">ext<span class="text-accent">charge</span></span>
+      <span>Made and operated in Germany. Independent — not affiliated with ExtensionPay.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
