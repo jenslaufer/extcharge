@@ -1,5 +1,6 @@
-# ExtCharge — Landing Page
+# extcharge
 
-Public landing page for [extcharge.com](https://extcharge.com), served via GitHub Pages.
+Public deploy target for [extcharge.com](https://extcharge.com) (GitHub Pages).
 
-Product, docs, and backend live in the private `extpay` repo.
+**Do not edit here.** This site is built from the private source repo and
+published with its `build.sh`. Change the source there, then re-run the build.
