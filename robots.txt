@@ -1,0 +1,5 @@
+# extcharge.com — all crawlers welcome, including AI search.
+User-agent: *
+Allow: /
+
+Sitemap: https://extcharge.com/sitemap.xml
