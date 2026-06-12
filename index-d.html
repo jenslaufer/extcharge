@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExtCharge — A payment platform you can leave in one line.</title>
+  <meta name="description" content="Your money lands in your own Stripe — ExtCharge never holds it. The client speaks the open ExtPay.js protocol, so moving on (or back) is one URL. No lock-in by design." />
+  <!-- A/B copy variant: noindex, canonical to the main page -->
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="https://extcharge.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ExtCharge — A payment platform you can leave in one line." />
+  <meta property="og:description" content="Your money in your own Stripe. Open protocol. Moving on — or back — is one URL." />
+  <meta property="og:url" content="https://extcharge.com/index-d" />
+  <meta property="og:site_name" content="ExtCharge" />
+  <meta property="og:image" content="https://extcharge.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            ink: '#0b0f0e',
+            paper: '#fbfbf9',
+            accent: '#0f8a5f',
+            accentdk: '#0a6647',
+            muted: '#5b635f',
+            line: '#e6e7e2',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    .label { letter-spacing: 0.08em; }
+  </style>
+</head>
+
+<body class="bg-paper text-ink font-sans antialiased">
+
+  <!-- Nav -->
+  <header class="border-b border-line">
+    <div class="mx-auto max-w-5xl px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-mono font-semibold text-lg tracking-tight">
+        ext<span class="text-accent">charge</span>
+      </a>
+      <nav class="flex items-center gap-5">
+        <a href="/extpay-alternative"
+           class="text-sm font-medium text-muted hover:text-ink transition-colors">
+          Coming from ExtPay?
+        </a>
+        <a href="#waitlist"
+           class="text-sm font-medium px-4 py-2 rounded-md bg-ink text-paper hover:bg-black transition-colors">
+          Get early access
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-6">
+
+    <!-- Hero -->
+    <section class="pt-24 pb-20 max-w-3xl">
+      <p class="label font-mono text-xs uppercase text-accent mb-5">Hosted extension payments · No lock-in by design</p>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.08]">
+        A payment platform you can leave in one line.
+      </h1>
+      <p class="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
+        Your money lands in your own Stripe account — ExtCharge never holds it. The
+        client speaks the open <span class="font-mono text-ink">ExtPay.js</span>
+        protocol, so moving on (or moving back) is one URL. We'd rather earn your
+        business every month than trap it once.
+      </p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 sm:items-center">
+        <a href="#waitlist"
+           class="inline-flex justify-center px-6 py-3 rounded-md bg-accent text-white font-semibold hover:bg-accentdk transition-colors">
+          Get early access
+        </a>
+        <span class="text-sm text-muted">Pre-launch. We're building it now — leave your email to be first in.</span>
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-8">Why a payments company would sell you its own exit</h2>
+      <div class="max-w-2xl space-y-5 text-[17px] leading-relaxed">
+        <p class="text-muted">
+          Every hosted payment service asks for the same thing: put your entire revenue
+          stream behind our API and trust us. For a solo developer that's the scariest
+          dependency there is — if the service raises rates, breaks, or disappears, your
+          income goes with it.
+        </p>
+        <p>
+          We can't promise you'll never want to leave. So we built it so leaving is
+          cheap. That changes who carries the risk: not you.
+        </p>
+      </div>
+    </section>
+
+    <!-- The three ownership guarantees -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-10">The three ownership guarantees</h2>
+      <div class="grid sm:grid-cols-3 gap-px bg-line rounded-lg overflow-hidden border border-line">
+        <div class="bg-paper p-7">
+          <div class="font-mono text-accent text-sm mb-3">01</div>
+          <h3 class="font-semibold text-lg mb-2">Your money never touches us</h3>
+          <p class="text-muted leading-relaxed text-[15px]">
+            You connect your own Stripe account via Stripe Connect. Every payment settles
+            directly there, on Stripe's rails, under your name. ExtCharge takes its small
+            per-transaction fee and holds nothing. No payout schedule of ours to wait on,
+            no balance of yours on our books.
+          </p>
+        </div>
+        <div class="bg-paper p-7">
+          <div class="font-mono text-accent text-sm mb-3">02</div>
+          <h3 class="font-semibold text-lg mb-2">Your integration isn't ours</h3>
+          <p class="text-muted leading-relaxed text-[15px]">
+            ExtCharge implements the same API as the open-source
+            <span class="font-mono text-ink">ExtPay.js</span> client — a protocol we
+            don't own and can't fence. Your payment code stays portable the day you
+            write it. Entering is one URL; so is leaving; so is coming back.
+          </p>
+        </div>
+        <div class="bg-paper p-7">
+          <div class="font-mono text-accent text-sm mb-3">03</div>
+          <h3 class="font-semibold text-lg mb-2">Your decisions actually hold</h3>
+          <p class="text-muted leading-relaxed text-[15px]">
+            You set prices, plans, trials, and coupons — and they're enforced on
+            ExtCharge's servers, not in the user's browser. A trial you set to 14 days
+            ends in 14 days; no console trick resets it. Those servers run in Germany,
+            EU-hosted and GDPR-first, so the data answer is yours to give too.
+            Magic-link login keeps your customers attached to <em>their email</em>, not
+            to our platform — payment history and analytics included.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 border-t border-line">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-6">Pricing</h2>
+      <p class="text-xl font-semibold max-w-2xl leading-snug">
+        A small percentage per transaction, only when you earn.
+        <span class="text-muted font-medium">No monthly fee, no setup fee, no contract.</span>
+      </p>
+      <p class="mt-4 text-muted leading-relaxed max-w-2xl">
+        We're aiming a bit under the going 5%, and the rate isn't final: early-access
+        developers help set it. If we ever stop being worth our cut, the exit is one
+        line. That's the deal — and if it sounds like your kind of deal,
+        <a href="#waitlist" class="text-accent font-medium hover:text-accentdk">the line below is where it starts</a>.
+      </p>
+    </section>
+
+    <!-- Waitlist CTA -->
+    <section id="waitlist" class="py-16 border-t border-line">
+      <div class="max-w-xl">
+        <h2 class="text-2xl font-bold tracking-tight">Convenience shouldn't cost you control.</h2>
+        <p class="mt-3 text-muted leading-relaxed">
+          ExtCharge is in validation — being built now. Leave your email for first
+          access and a say in pricing. You can unsubscribe with one click, which is how
+          the whole product is supposed to feel.
+        </p>
+        <p class="mt-3 text-muted leading-relaxed">
+          The product guarantee is the architecture itself: if we ever stop being worth
+          our cut, you leave in one line — money already in your Stripe, integration
+          already portable.
+        </p>
+
+        <form id="waitlist-form" class="mt-7 flex flex-col sm:flex-row gap-3" novalidate>
+          <!-- honeypot: hidden from humans, bots fill it -->
+          <input type="text" name="hp" id="hp" tabindex="-1" autocomplete="off"
+                 class="hidden" aria-hidden="true" />
+          <input type="email" name="email" id="email" required
+                 placeholder="you@example.com"
+                 class="flex-1 px-4 py-3 rounded-md border border-line bg-white
+                        focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent
+                        placeholder:text-muted/70" />
+          <button type="submit"
+                  class="px-6 py-3 rounded-md bg-accent text-white font-semibold
+                         hover:bg-accentdk transition-colors disabled:opacity-50">
+            Get early access
+          </button>
+        </form>
+        <p id="form-msg" class="mt-3 text-sm h-5" role="status" aria-live="polite"></p>
+        <p class="mt-2 text-sm text-muted">
+          Email only — no credit card, no commitment. One message when it's ready.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-line">
+    <div class="mx-auto max-w-5xl px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-sm text-muted">
+      <span class="font-mono">ext<span class="text-accent">charge</span></span>
+      <span>Made and operated in Germany. Independent — not affiliated with ExtensionPay.</span>
+    </div>
+  </footer>
+
+  <script>
+    const ENDPOINT = "https://auth.solytics.de/t/extcharge/marketing/public/lead-capture";
+    const SEGMENT = "extcharge-waitlist";
+    const VARIANT_SEGMENT = "extcharge-waitlist-d"; // A/B attribution
+
+    const form = document.getElementById("waitlist-form");
+    const msg = document.getElementById("form-msg");
+    const btn = form.querySelector("button");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const hp = document.getElementById("hp").value;
+
+      if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        msg.textContent = "Please enter a valid email address.";
+        msg.className = "mt-3 text-sm h-5 text-red-600";
+        return;
+      }
+
+      btn.disabled = true;
+      msg.textContent = "Adding you…";
+      msg.className = "mt-3 text-sm h-5 text-muted";
+
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, name: "", segment: SEGMENT, hp }),
+        });
+        if (res.ok) {
+          // best-effort variant tag — never blocks or fails the signup
+          fetch(ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, name: "", segment: VARIANT_SEGMENT, hp }),
+          }).catch(() => {});
+          form.reset();
+          msg.textContent = "You're on the list. We'll be in touch.";
+          msg.className = "mt-3 text-sm h-5 text-accent font-medium";
+        } else {
+          throw new Error("status " + res.status);
+        }
+      } catch (err) {
+        msg.textContent = "Something went wrong — please try again in a moment.";
+        msg.className = "mt-3 text-sm h-5 text-red-600";
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
