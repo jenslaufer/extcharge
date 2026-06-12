@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ExtCharge — Payments for browser extensions, hosted in the EU</title>
-  <meta name="description" content="Connect Stripe, add a few lines of code, get paid. Subscriptions, one-time, free trials. A drop-in alternative to ExtensionPay, run in Germany." />
+  <title>ExtCharge — Payments for browser extensions, no backend needed</title>
+  <meta name="description" content="Connect Stripe, add a few lines of code, get paid. Subscriptions, one-time, free trials — no server, no database. Trials enforced server-side." />
   <link rel="canonical" href="https://extcharge.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="ExtCharge — Payments for browser extensions" />
-  <meta property="og:description" content="A drop-in, server-authoritative alternative to ExtensionPay. Hosted in the EU." />
+  <meta property="og:description" content="Connect Stripe, add a few lines of code, get paid. Trials enforced server-side — no backend needed." />
   <meta property="og:url" content="https://extcharge.com/" />
   <meta property="og:site_name" content="ExtCharge" />
   <meta property="og:image" content="https://extcharge.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="ExtCharge — connect Stripe, get paid. A drop-in, EU-hosted alternative to ExtensionPay." />
+  <meta property="og:image:alt" content="ExtCharge — connect Stripe, get paid. Subscriptions, one-time payments, free trials — no backend needed." />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ExtCharge — Payments for browser extensions" />
-  <meta name="twitter:description" content="A drop-in, server-authoritative alternative to ExtensionPay. Hosted in the EU." />
+  <meta name="twitter:description" content="Connect Stripe, add a few lines of code, get paid. Trials enforced server-side — no backend needed." />
   <meta name="twitter:image" content="https://extcharge.com/og-image.png" />
 
   <!-- Entity for search + AI answers. Validation phase: brand entity only, no price/availability claims. -->
@@ -31,7 +31,7 @@
     "@type": "Organization",
     "name": "ExtCharge",
     "url": "https://extcharge.com/",
-    "description": "Payments for browser extensions, hosted in the EU. A drop-in, server-authoritative alternative to ExtensionPay: connect Stripe, add a few lines of code, get paid.",
+    "description": "Payments for browser extensions: connect Stripe, add a few lines of code, get paid. Subscriptions, one-time payments, and free trials — enforced server-side, no backend needed.",
     "foundingLocation": {
       "@type": "Country",
       "name": "Germany"
@@ -81,10 +81,6 @@
         ext<span class="text-accent">charge</span>
       </a>
       <nav class="flex items-center gap-5">
-        <a href="/extpay-alternative"
-           class="text-sm font-medium text-muted hover:text-ink transition-colors">
-          Coming from ExtPay?
-        </a>
         <a href="#waitlist"
            class="text-sm font-medium px-4 py-2 rounded-md bg-ink text-paper hover:bg-black transition-colors">
           Get early access
@@ -97,14 +93,14 @@
 
     <!-- Hero -->
     <section class="pt-24 pb-20 max-w-3xl">
-      <p class="label font-mono text-xs uppercase text-accent mb-5">Hosted in the EU · Building now</p>
+      <p class="label font-mono text-xs uppercase text-accent mb-5">Stripe-backed · Building now</p>
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.08]">
         Payments for your browser extension.
         <span class="block text-muted font-semibold">Without the headaches.</span>
       </h1>
       <p class="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
         Connect Stripe, add a few lines of code, get paid — subscriptions, one-time
-        purchases, free trials. A drop-in alternative to ExtensionPay, run in Germany.
+        purchases, free trials. No server, no database, nothing to babysit.
       </p>
       <div class="mt-9 flex flex-col sm:flex-row gap-3 sm:items-center">
         <a href="#waitlist"
@@ -137,10 +133,11 @@
         </div>
         <div class="bg-paper p-7">
           <div class="font-mono text-accent text-sm mb-3">03</div>
-          <h3 class="font-semibold text-lg mb-2">Switch in one line</h3>
+          <h3 class="font-semibold text-lg mb-2">No lock-in by design</h3>
           <p class="text-muted leading-relaxed text-[15px]">
-            ExtCharge speaks the same API as the open-source <span class="font-mono text-ink">ExtPay.js</span>
-            client. Already on ExtensionPay? Change one URL and you're moved. No rewrite.
+            The client library is open source and your money settles in your own Stripe.
+            If ExtCharge ever stops earning its fee, you walk away with your integration
+            and your customers.
           </p>
         </div>
       </div>
@@ -223,7 +220,7 @@
   <footer class="border-t border-line">
     <div class="mx-auto max-w-5xl px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-sm text-muted">
       <span class="font-mono">ext<span class="text-accent">charge</span></span>
-      <span>Made and operated in Germany. Independent — not affiliated with ExtensionPay.</span>
+      <span>Made and operated in Germany.</span>
     </div>
   </footer>
 

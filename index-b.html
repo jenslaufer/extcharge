@@ -60,10 +60,6 @@
         ext<span class="text-accent">charge</span>
       </a>
       <nav class="flex items-center gap-5">
-        <a href="/extpay-alternative"
-           class="text-sm font-medium text-muted hover:text-ink transition-colors">
-          Coming from ExtPay?
-        </a>
         <a href="#waitlist"
            class="text-sm font-medium px-4 py-2 rounded-md bg-ink text-paper hover:bg-black transition-colors">
           Get early access
@@ -112,10 +108,10 @@
           No code injection, no cracked build. Just edited local storage. This isn't
           hypothetical:
           <a href="https://dev.to/jacksonkasi/how-i-hacked-a-chrome-extension-to-get-a-7978-year-free-trial-yes-you-read-that-right-156h"
-             class="text-accent font-medium hover:text-accentdk" rel="nofollow">it's a published write-up</a>,
-          and ExtensionPay's own documentation states that trial duration is computed
-          client-side. ExtensionPay is good, trusted software — this is a structural
-          choice, not a bug. But the structure means every trial decision happens on
+             class="text-accent font-medium hover:text-accentdk" rel="nofollow">it's a published write-up</a>
+          — and most extension paywalls work exactly this way, because the trial check
+          ships inside the extension. That's not a bug in any one product; it's a
+          structural choice. But the structure means every trial decision happens on
           hardware your user controls.
         </p>
         <p>
@@ -155,10 +151,8 @@
           <p class="text-muted leading-relaxed text-[15px]">
             Subscriptions, one-time payments, plans, coupons, analytics, 135+ currencies,
             all major browsers — paid into your own Stripe account via Stripe Connect.
-            ExtCharge never holds your money. And it speaks the same API as the
-            open-source <span class="font-mono text-ink">ExtPay.js</span> client, so if
-            you're already on ExtensionPay, the switch is one URL. Hosted in the EU,
-            GDPR-first.
+            ExtCharge never holds your money. The client library is open source, so
+            nothing in your codebase is a black box.
           </p>
         </div>
       </div>
@@ -184,12 +178,12 @@
         <h2 class="text-2xl font-bold tracking-tight">Patch your paywall.</h2>
         <p class="mt-3 text-muted leading-relaxed">
           Every reset trial is revenue you already earned. ExtCharge is being built now —
-          leave your email for first access, a one-URL migration if you're on
-          ExtensionPay, and a say in what ships.
+          leave your email for first access and a say in what ships.
         </p>
         <p class="mt-3 text-muted leading-relaxed">
-          If the patch isn't right for you when it ships, switching away is the same one
-          URL. Your integration stays yours; nothing is held hostage.
+          If the patch isn't right for you when it ships, you walk away whole: the client
+          library is open source and your money is already in your own Stripe — nothing
+          is held hostage.
         </p>
 
         <form id="waitlist-form" class="mt-7 flex flex-col sm:flex-row gap-3" novalidate>
@@ -220,8 +214,7 @@
   <footer class="border-t border-line">
     <div class="mx-auto max-w-5xl px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-sm text-muted">
       <span class="font-mono">ext<span class="text-accent">charge</span></span>
-      <span>Made and operated in Germany. Independent — not affiliated with ExtensionPay.
-        ExtensionPay details from extensionpay.com docs (June 2026).</span>
+      <span>Made and operated in Germany.</span>
     </div>
   </footer>
 
