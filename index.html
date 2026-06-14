@@ -265,7 +265,12 @@
 
   <script>
     const ENDPOINT = "https://auth.solytics.de/t/extcharge/marketing/public/lead-capture";
-    const SEGMENT = "waitlist-cws";
+    // Every opt-in joins the canonical waitlist, plus one source segment so we can
+    // tell where it came from: ?ref=cws (clicked the outreach email) vs direct.
+    const SEGMENT = "waitlist";
+    const REF_SEGMENTS = { cws: "waitlist-cws" };
+    const ref = new URLSearchParams(location.search).get("ref");
+    const SOURCE_SEGMENT = REF_SEGMENTS[ref] || "waitlist-direct";
 
     const form = document.getElementById("waitlist-form");
     const msg = document.getElementById("form-msg");
@@ -293,6 +298,12 @@
           body: JSON.stringify({ email, name: "", segment: SEGMENT, hp }),
         });
         if (res.ok) {
+          // best-effort source tag — never blocks or fails the signup
+          fetch(ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, name: "", segment: SOURCE_SEGMENT, hp }),
+          }).catch(() => {});
           form.reset();
           msg.textContent = "You're on the list. We'll be in touch.";
           msg.className = "mt-3 text-sm h-5 text-accent font-medium";
