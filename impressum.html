@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum — ExtCharge</title>
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="https://extcharge.com/impressum.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            ink: '#0b0f0e',
+            paper: '#fbfbf9',
+            accent: '#0f8a5f',
+            accentdk: '#0a6647',
+            muted: '#5b635f',
+            line: '#e6e7e2',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { -webkit-font-smoothing: antialiased; }
+    .label { letter-spacing: 0.08em; }
+  </style>
+</head>
+
+<body class="bg-paper text-ink font-sans antialiased">
+
+  <!-- Nav -->
+  <header class="border-b border-line">
+    <div class="mx-auto max-w-5xl px-6 h-16 flex items-center justify-between">
+      <a href="/" class="font-mono font-semibold text-lg tracking-tight">
+        ext<span class="text-accent">charge</span>
+      </a>
+      <nav class="flex items-center gap-5 text-sm">
+        <a href="/" class="text-muted hover:text-ink transition-colors">&larr; Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-2xl px-6 py-16">
+    <h1 class="text-3xl font-bold tracking-tight">Impressum</h1>
+
+    <section class="mt-10 space-y-2 leading-relaxed">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-3">Angaben gemäß § 5 TMG</h2>
+      <p>
+        Solytics GmbH<br />
+        Hörsteiner Str. 20a<br />
+        63791 Karlstein a. Main<br />
+        Deutschland
+      </p>
+    </section>
+
+    <section class="mt-8 space-y-2 leading-relaxed">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-3">Vertreten durch</h2>
+      <p>Jens Laufer (Geschäftsführer)</p>
+    </section>
+
+    <section class="mt-8 space-y-2 leading-relaxed">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-3">Kontakt</h2>
+      <p>E-Mail: <a href="mailto:jens.laufer@solytics.de" class="text-accent hover:text-accentdk">jens.laufer@solytics.de</a></p>
+    </section>
+
+    <section class="mt-8 space-y-2 leading-relaxed">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-3">Registereintrag</h2>
+      <p>
+        Registergericht: Amtsgericht Aschaffenburg<br />
+        Registernummer: HRB 16879
+      </p>
+    </section>
+
+    <section class="mt-8 space-y-2 leading-relaxed">
+      <h2 class="font-mono text-xs uppercase label text-muted mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+      <p>
+        Jens Laufer<br />
+        Hörsteiner Str. 20a<br />
+        63791 Karlstein a. Main
+      </p>
+    </section>
+
+    <section class="mt-12 space-y-4 leading-relaxed text-muted text-[15px]">
+      <h2 class="font-semibold text-ink text-lg">Haftungsausschluss</h2>
+      <div>
+        <h3 class="font-semibold text-ink">Haftung für Inhalte</h3>
+        <p class="mt-1">
+          Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die
+          Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine
+          Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene
+          Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8
+          bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte
+          oder gespeicherte fremde Informationen zu überwachen.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-ink">Haftung für Links</h3>
+        <p class="mt-1">
+          Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir
+          keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine
+          Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
+          Anbieter oder Betreiber der Seiten verantwortlich.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-line">
+    <div class="mx-auto max-w-5xl px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-sm text-muted">
+      <span class="font-mono">ext<span class="text-accent">charge</span></span>
+      <nav class="flex items-center gap-5">
+        <a href="/impressum.html" class="hover:text-ink transition-colors">Impressum</a>
+        <a href="/datenschutz.html" class="hover:text-ink transition-colors">Datenschutz</a>
+      </nav>
+      <span>Made and operated in Germany.</span>
+    </div>
+  </footer>
+</body>
+</html>
